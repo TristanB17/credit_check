@@ -9,9 +9,6 @@ class TestCreditCheck < Minitest::Test
 
 #this method ensures that the class "CreditCheck" exists
   def test_does_credit_check_exist
-    #makes new iteration for testing method
-    #Why do I have to specify this argument?
-    #Why does every method need an iteration w/argument "credit_number", and not the result of the previous method?
     creditcheck = CreditCheck.new("4929735477250543")
     #says that instance of CreditCheck is present
     assert_instance_of CreditCheck, creditcheck
@@ -32,8 +29,6 @@ class TestCreditCheck < Minitest::Test
   end
 
   def test_multiply_every_other_number
-    #again, why does this need to use the original credit number as an argument?
-    #Wouldn't it use the number/array AFTER the original one has been converted to an array?
     creditcheck = CreditCheck.new("4929735477250543")
     #this makes it easier to write
     result = [3, 8, 5, 0, 5, 4, 7, 14, 4, 10, 3, 14, 9, 4, 9, 8]
