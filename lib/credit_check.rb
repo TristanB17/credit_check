@@ -9,17 +9,19 @@ class CreditCheck
 
   end
 
-  # def length_verification
+  def length_verification
 
-  #   loop do
-  #     if @credit_number.length == 16 || @credit_number.length == 15
-  #       @credit_number
-  #     else
-  #       puts "Please try again"
-  #       @credit_number = gets.chomp
-  #     end
-  #   end
-  # end
+    loop do
+      if @credit_number.length == 16 || @credit_number.length == 15
+        @credit_number = credit_number
+        break
+      else
+        puts "Please try again"
+        @credit_number = gets.chomp
+      end
+    end
+    @credit_number
+  end
 
 
   def convert_to_array
