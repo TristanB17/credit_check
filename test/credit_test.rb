@@ -11,7 +11,7 @@ class TestCreditCheck < Minitest::Test
   def test_does_credit_check_exist
     creditcheck = CreditCheck.new("4929735477250543")
     #says that instance of CreditCheck is present
-    assert_instance_of CreditCheck, creditcheck
+    assert_instance_of CreditCheck , creditcheck
   end
 
   #this method checkes to see if the class CreditCheck has any attributes
@@ -21,10 +21,15 @@ class TestCreditCheck < Minitest::Test
     assert_equal "4929735477250543", creditcheck.credit_number
   end
 
+  def test_length_verification
+    creditcheck = CreditCheck.new("4929735477250543")
+    assert_equal "4929735477250543", creditcheck.length_verification
+  end
 
   #This is a method for converting the new creditcheck number to an array
   def test_convert_to_array
     creditcheck = CreditCheck.new("4929735477250543")
+
     assert_equal [3, 4, 5, 0, 5, 2, 7, 7, 4, 5, 3, 7, 9, 2, 9, 4], creditcheck.convert_to_array
   end
 

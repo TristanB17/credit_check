@@ -1,9 +1,27 @@
+# require_relative 'credit_runner'
+require 'pry'
+
 class CreditCheck
   attr_reader :credit_number
 
   def initialize(credit_number)
     @credit_number = credit_number
+
   end
+
+  def length_verification
+
+    loop do
+      if @credit_number.length == 16 || @credit_number.length == 15
+        @credit_number = credit_number
+      else
+        puts "Please try again"
+        @credit_number = gets.chomp
+      end
+    end
+    @credit_number
+  end
+
 
   def convert_to_array
     credit_number.to_i.digits
@@ -36,20 +54,21 @@ class CreditCheck
   def check_number
     if add_all_numbers % 10 == 0
       # return true
-     "Number is valid"
+      "Number is valid"
     else
       # return false
-    "Number is invalid"
+      "Number is invalid"
     end
   end
   #
-  # def print_validation
-  #   puts 'Number is valid' if check_number
-  #   puts 'Number is invalid' if !check_number
-  # end
+   # def print_validation
+   #  puts 'Number is valid' if check_number
+   #  puts 'Number is invalid' if !check_number
+   # end
 
 
 end
+
 
 # creditcheck = CreditCheck.new("4929735477250543")
 # creditcheck.print_validation
