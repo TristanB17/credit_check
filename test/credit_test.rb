@@ -21,10 +21,10 @@ class TestCreditCheck < Minitest::Test
     assert_equal "4929735477250543", creditcheck.credit_number
   end
 
-  def test_length_verification
-    creditcheck = CreditCheck.new("4929735477250543")
-    assert_equal "4929735477250543", creditcheck.length_verification
-  end
+  # def test_length_verification
+  #   creditcheck = CreditCheck.new("4929735477250543")
+  #   assert_equal "4929735477250543", creditcheck.length_verification
+  # end
 
   #This is a method for converting the new creditcheck number to an array
   def test_convert_to_array

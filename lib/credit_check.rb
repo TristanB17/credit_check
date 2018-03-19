@@ -9,18 +9,17 @@ class CreditCheck
 
   end
 
-  def length_verification
+  # def length_verification
 
-    loop do
-      if @credit_number.length == 16 || @credit_number.length == 15
-        @credit_number = credit_number
-      else
-        puts "Please try again"
-        @credit_number = gets.chomp
-      end
-    end
-    @credit_number
-  end
+  #   loop do
+  #     if @credit_number.length == 16 || @credit_number.length == 15
+  #       @credit_number
+  #     else
+  #       puts "Please try again"
+  #       @credit_number = gets.chomp
+  #     end
+  #   end
+  # end
 
 
   def convert_to_array
@@ -60,17 +59,5 @@ class CreditCheck
       "Number is invalid"
     end
   end
-  #
-   # def print_validation
-   #  puts 'Number is valid' if check_number
-   #  puts 'Number is invalid' if !check_number
-   # end
-
 
 end
-
-
-# creditcheck = CreditCheck.new("4929735477250543")
-# creditcheck.print_validation
-# cc_2 = CreditCheck.new('5541808923795240')
-# cc_2.print_validation

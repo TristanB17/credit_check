@@ -6,7 +6,7 @@ class NumberTest
   def enter_number
     puts "Please enter your credit card number"
     credit_number = gets.chomp
-    CreditCheck.new(credit_number).length_verification
+    # CreditCheck.new(credit_number).length_verification
   end
 end
 
